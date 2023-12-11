@@ -1,0 +1,74 @@
+@import './fonts';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+// Font Styles
+.normal{
+    font-family: 'Quicksand', sans-serif;
+}
+.sketch{
+    font-family: 'Cabin Sketch', cursive;
+}
+.bangers{
+    font-family: 'Bangers', cursive;
+}
+
+// Font Sizes
+.micro{
+    font-size: 1.2rem;
+}
+.normalSize{
+    font-size: 1.4rem;
+}
+.large{
+    font-size: 1.6rem;
+}
+.xLarge{
+    font-size: 1.8rem;
+}
+.big{
+    font-size: 4.5rem;
+}
+.xBig{
+    font-size: 6.2rem;
+}
+
+// Font Weight
+.light{
+    font-weight: 300;
+}
+.normalBold{
+    font-weight: 400;
+}
+.semiHard{
+    font-weight: 500;
+}
+.hard{
+    font-weight: 700;
+}
+
+// Font Colors
+.primary{
+    color: $primary;
+}
+.secondary{
+    color: $secondary;
+}
+.sand{
+    color: $sand;
+}
+.cold{
+    color: $cold;
+}
+.success{
+    color: $success;
+}
+.danger{
+    color: $danger;
+}
+.warning{
+    color: $warning;
+}
+.info{
+    color: $info;
+}

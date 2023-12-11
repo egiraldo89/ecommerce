@@ -1,0 +1,60 @@
+@import '../../sass/base/typography';
+@import '../../sass/abstracts/variables';
+@import '../../sass/abstracts/mixins';
+
+.main{
+    color: $white;
+    border-radius: $border-radius;
+    outline: none;
+}
+
+.btn-padding{
+    padding: 1rem 3rem;
+}
+
+.full{
+    flex: 1
+}
+
+.btn-primary{
+    background-color: $primary;
+}
+
+.btn-secondary{
+    background-color: $secondary;
+}
+
+.btn-success{
+    background-color: $success;
+}
+
+.btn-danger{
+    background-color: $danger;
+}
+
+.btn-warning{
+    background-color: $warning;
+}
+
+.btn-info{
+    background-color: $info;
+}
+.outline {
+    background-color: $white;
+    color: $primary;
+    &.btn-secondary {
+        @include buttonOutline($secondary);
+    }
+    &.btn-success{
+        @include buttonOutline($success);
+    }
+    &.btn-danger {
+        @include buttonOutline($danger);
+    }
+    &.btn-warning{
+        @include buttonOutline($warning);
+    }
+    &.btn-info{
+        @include buttonOutline($info);
+    }
+}

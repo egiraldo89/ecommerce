@@ -1,0 +1,69 @@
+
+.loadingContainer{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loadingContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color oscuro con transparencia */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+  }
+.imageWrapper{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%)
+}
+.loadingImg{
+    width: 12rem;
+    display: block;
+}
+.movingImage {
+    animation: runLeftToRight 2s linear infinite; /* Aplica la animación */
+}
+.movingImageInverter {
+    animation: runLeftToRightInverter 2s linear infinite; /* Aplica la animación */
+}
+
+@keyframes runLeftToRight{
+    0% {
+      transform: translateX(-100%); /* Empieza fuera de la pantalla a la izquierda */
+    }
+    10% {
+        transform: translateX(-100%); /* Empieza fuera de la pantalla a la izquierda */
+      }
+    90% {
+      transform: translateX(100%); /* Llega al límite derecho */
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%); /* Permanece en el límite derecho durante 1 segundo */
+      opacity: 0;
+    }
+}
+@keyframes runLeftToRightInverter{
+    0% {
+      transform: translateX(-100%) rotateY(180deg); /* Empieza fuera de la pantalla a la izquierda */
+      opacity: 0;
+    }
+    10% {
+        transform: translateX(-100%) rotateY(180deg); /* Empieza fuera de la pantalla a la izquierda */
+        opacity: 1;
+      }
+    90% {
+      transform: translateX(100%) rotateY(180deg); /* Llega al límite derecho */
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%) rotateY(180deg); /* Permanece en el límite derecho durante 1 segundo */
+      opacity: 0;
+    }
+}

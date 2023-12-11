@@ -1,0 +1,81 @@
+.bottomImageContainer, .topImageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: space-between;
+}
+
+.rightImageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.leftImageContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.bottomImage, .topImage {
+    width: 100%;
+    display: flex;
+    justify-content: center
+}
+
+.rightImage, .leftImage{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.childrenVertical{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.childrenHorizontal{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.bottomImage img{
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 0,
+}
+
+.rightImage img{
+    position: absolute;
+    right: 0
+}
+
+
+.image-box {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+.image-box img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.image-box:hover img {
+    transform: scale(1.1);
+}

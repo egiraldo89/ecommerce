@@ -1,0 +1,70 @@
+@import '../../../sass/base/typography';
+
+.floating-label-input {
+    position: relative;
+
+    label {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform-origin: left top;
+        transition: all 0.3s;
+        pointer-events: none;
+        color: #333;
+        /* Color por defecto del label */
+    }
+
+    &.focused label,
+    input:focus+label {
+        transform: translateY(-1.5rem) scale(0.8);
+        // color: red; /* Cambiar color del label al enfocar */
+    }
+
+    input {
+        width: 100%;
+        padding: 1rem 0;
+        /* Ajustar el padding para el espacio entre el texto y el borde inferior */
+        border: none;
+        /* Quitar los bordes */
+        border-bottom: 1px solid #ccc;
+        /* Añadir el borde inferior por defecto */
+        font-size: 16px;
+        background: transparent;
+        /* Fondo transparente */
+        outline: none;
+        /* Quitar el borde de enfoque */
+        transition: border-color 0.3s;
+        /* Agregar transición para el cambio de color */
+    }
+
+    &.input-primary input:focus {
+        border-color: $primary;
+        /* Cambiar el color del borde inferior del input al enfocarlo con clase .prueba */
+    }
+
+    &.input-secondary input:focus {
+        border-color: $secondary;
+        /* Cambiar el color del borde inferior del input al enfocarlo con clase .prueba */
+    }
+
+    &.input-success input:focus {
+        border-color: $success;
+        /* Cambiar el color del borde inferior del input al enfocarlo con clase .prueba */
+    }
+
+    &.input-danger input:focus {
+        border-color: $danger;
+        /* Cambiar el color del borde inferior del input al enfocarlo con clase .prueba */
+    }
+
+    &.input-warning input:focus {
+        border-color: $warning;
+        /* Cambiar el color del borde inferior del input al enfocarlo con clase .prueba */
+    }
+
+    &.input-info input:focus {
+        border-color: $info;
+        /* Cambiar el color del borde inferior del input al enfocarlo con clase .prueba */
+    }
+
+}
